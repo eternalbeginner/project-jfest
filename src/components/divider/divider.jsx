@@ -1,5 +1,5 @@
 import { styled } from '../../../stitches.config';
-import divider from '../../assets/misc/divider.svg';
+import divider from '../../assets/icons/divider.svg';
 
 const BaseDivider = styled('img', {
   display: 'block',
