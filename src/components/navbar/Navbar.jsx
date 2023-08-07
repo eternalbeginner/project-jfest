@@ -2,9 +2,9 @@ import { useWindowScroll } from '@uidotdev/usehooks';
 
 import { styled } from '../../../stitches.config';
 
-import NavbarCta from './navbar-cta';
-import NavbarLogo from './navbar-logo';
-import NavbarMenu from './navbar-menu';
+import NavbarCta from './NavbarCta';
+import NavbarLogo from './NavbarLogo';
+import NavbarMenu from './NavbarMenu';
 
 const Container = styled('nav', {
   position: 'fixed',
