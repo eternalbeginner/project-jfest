@@ -7,7 +7,9 @@ const List = styled('ul', {
   alignItems: 'center',
   justifyContent: 'flex-start',
   listStyleType: 'none',
-  gap: '3.5rem',
+  '@desktop': { gap: '3.5rem' },
+  '@tablet': { gap: '3rem' },
+  '@mobile': { gap: '2.5rem' },
 });
 
 const ListItem = styled('li', {
@@ -18,6 +20,9 @@ const ListItem = styled('li', {
   fontSize: '1.5em',
   color: '$white',
   cursor: 'unset',
+  '@desktop': { fontSize: '1.5em' },
+  '@tablet': { fontSize: '1.25em' },
+  '@mobile': { fontSize: '1em' },
 });
 
 const ListItemAnchor = styled('a', {

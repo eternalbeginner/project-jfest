@@ -1,4 +1,3 @@
-import { useWindowSize } from '@uidotdev/usehooks';
 import { styled } from '../../../stitches.config';
 
 import { Navbar } from '../../components/navbar';
@@ -9,29 +8,36 @@ import backdrop from '../../assets/backdrop.png';
 const Hero = styled('section', {
   position: 'relative',
   display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
   width: '100%',
-  height: 'max-content',
-  minHeight: 1024,
   backgroundColor: '$primary',
+  '@desktop': { height: '155vh' },
+  '@tablet': { height: '145vh' },
+  '@mobile': { height: '135vh' },
 });
 
-const HeroImage = styled('img', {
+const HeroImage = styled('div', {
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
   display: 'block',
-  alignSelf: 'flex-end',
-  height: 'auto',
   width: '100%',
-  objectFit: 'contain',
-  objectPosition: 'center',
+  height: '100%',
+  backgroundPositionX: 'center',
+  backgroundPositionY: 'bottom',
+  backgroundRepeat: 'no-repeat',
+  '@desktop': { backgroundImage: `url("${backdrop}")` },
+  '@tablet': { backgroundImage: `url("${backdrop}")` },
+  '@mobile': { backgroundImage: `url("${backdropMobile}")` },
 });
 
 export default function HomePage() {
-  const { width } = useWindowSize();
-
   return (
     <>
       <Hero>
+        <HeroImage />
         <Navbar />
-        <HeroImage src={width <= 769 ? backdropMobile : backdrop} width="100%" />
       </Hero>
     </>
   );

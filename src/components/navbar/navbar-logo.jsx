@@ -7,6 +7,7 @@ const Logo = styled('img', {
   objectFit: 'cover',
   objectPosition: 'center',
   width: 50,
+  '@mobile': { width: 40 },
 });
 
 export default function NavbarLogo() {

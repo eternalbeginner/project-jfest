@@ -7,10 +7,6 @@ const Base = styled('button', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: 'fit-content',
-  height: 'fit-content',
-  minWidth: 250,
-  minHeight: 55,
   outline: 'none',
   border: 'none',
   backgroundColor: 'transparent',
@@ -27,9 +23,22 @@ const Base = styled('button', {
       dark: { backgroundImage: `url("${dark}")`, color: '$white' },
       light: { backgroundImage: `url("${light}")`, color: '$dark' },
     },
+    size: {
+      desktop: {
+        height: '$desktop-button-height',
+        width: '$desktop-button-width',
+        fontSize: '1.5em',
+      },
+      mobile: {
+        height: '$mobile-button-height',
+        width: '$mobile-button-width',
+        fontSize: '1em',
+      },
+    },
   },
   defaultVariants: {
     color: 'dark',
+    size: 'desktop',
   },
 });
 
@@ -39,9 +48,11 @@ const AnchorButton = styled(Base, {
 });
 
 export default function Button({ as = 'button', children, ...props }) {
-  if (as === 'button') {
-    return <Base {...props}>{children}</Base>;
-  }
+  const Wrapper = as === 'button' ? Base : AnchorButton;
 
-  return <AnchorButton {...props}>{children}</AnchorButton>;
+  return (
+    <Wrapper {...props} size={{ '@mobile': 'mobile' }}>
+      {children}
+    </Wrapper>
+  );
 }
