@@ -1,9 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import { globalCss } from '../stitches.config';
 
 import { Navbar } from './components/navbar';
-import { Footer } from './components/footer/';
+import { Footer } from './components/footer';
 
 import HomePage from './pages/home';
 
@@ -14,14 +13,8 @@ const router = createBrowserRouter([{ path: '/', element: <HomePage /> }]);
 
 const globalStyles = globalCss({
   '@font-face': [
-    {
-      fontFamily: 'dreadful',
-      src: `url("${dreadful}")`,
-    },
-    {
-      fontFamily: 'jack',
-      src: `url("${jack}")`,
-    },
+    { fontFamily: 'dreadful', src: `url("${dreadful}")` },
+    { fontFamily: 'jack', src: `url("${jack}")` },
   ],
   '*, html': {
     margin: 0,
