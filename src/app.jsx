@@ -1,9 +1,16 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import { globalCss } from '../stitches.config';
+
+import { Navbar } from './components/navbar';
+import { Footer } from './components/footer/';
 
 import HomePage from './pages/home';
 
 import dreadful from './assets/fonts/dreadful.otf';
 import jack from './assets/fonts/jack-reacher.ttf';
+
+const router = createBrowserRouter([{ path: '/', element: <HomePage /> }]);
 
 const globalStyles = globalCss({
   '@font-face': [
@@ -33,5 +40,11 @@ const globalStyles = globalCss({
 export default function App() {
   globalStyles();
 
-  return <HomePage />;
+  return (
+    <>
+      <Navbar />
+      <RouterProvider router={router} />
+      <Footer />
+    </>
+  );
 }

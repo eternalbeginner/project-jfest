@@ -1,13 +1,18 @@
-import { styled, css } from '../../../stitches.config';
+import { css, styled } from '../../../stitches.config';
 
-import { Navbar } from '../../components/navbar';
-import { Title } from '../../components/title';
 import { Button } from '../../components/button';
 import { Divider } from '../../components/divider';
+import { Title } from '../../components/title';
 
-import backdrop from '../../assets/backdrop.png';
 import backdropMobile from '../../assets/backdrop-mobile.png';
+import backdrop from '../../assets/backdrop.png';
 import pointDown from '../../assets/icons/point-down.svg';
+
+const mediaOrientationLandscape = `@media screen and ${[
+  '(max-width: 950px)',
+  '(min-height: 100px)',
+  '(orientation: landscape)',
+].join(' and ')}`;
 
 const Hero = styled('section', {
   position: 'relative',
@@ -20,7 +25,7 @@ const Hero = styled('section', {
   '@laptop': { height: '142.5vh' },
   '@tablet': { height: '100vh' },
   '@mobile': { height: '135vh' },
-  '@media screen and (max-width: 950px) and (min-height: 100px) and (orientation: landscape)': {
+  [mediaOrientationLandscape]: {
     height: '210vh',
   },
 });
@@ -47,7 +52,6 @@ export default function HomePage() {
     <>
       <Hero>
         <HeroImage />
-        <Navbar />
         <div
           className={css({
             display: 'flex',
@@ -81,10 +85,9 @@ export default function HomePage() {
             fontSize: '1.5em',
             pointerEvents: 'none',
             zIndex: 1,
-            '@media screen and (max-width: 950px) and (min-height: 100px) and (orientation: landscape)':
-              {
-                bottom: '3rem',
-              },
+            [mediaOrientationLandscape]: {
+              bottom: '3rem',
+            },
           }).toString()}>
           <span>Scroll Down</span>
           <img src={pointDown} alt="Point down icon" style={{ height: 25, width: 25 }} />

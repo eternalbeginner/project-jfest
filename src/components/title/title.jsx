@@ -17,9 +17,24 @@ const BaseTitle = styled('span', {
     order: [
       {
         '@desktop': { fontSize: '$title-desktop' },
-        '@laptop': { fontSize: '$title-laptop' },
-        '@tablet': { fontSize: '$title-tablet' },
+        '@laptop': { fontSize: '$title-laptop', letterSpacing: 6 },
+        '@tablet': { fontSize: '$title-tablet', letterSpacing: 5.5 },
         '@mobile': { fontSize: '$title-mobile', letterSpacing: 5 },
+      },
+      {
+        '@laptop': { letterSpacing: 5 },
+        '@tablet': { letterSpacing: 4.5 },
+        '@mobile': { letterSpacing: 4 },
+      },
+      {
+        '@laptop': { letterSpacing: 4 },
+        '@tablet': { letterSpacing: 3.5 },
+        '@mobile': { letterSpacing: 3 },
+      },
+      {
+        '@laptop': { letterSpacing: 3 },
+        '@tablet': { letterSpacing: 2.5 },
+        '@mobile': { letterSpacing: 2 },
       },
     ],
   },
