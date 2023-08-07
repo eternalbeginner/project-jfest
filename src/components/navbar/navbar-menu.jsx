@@ -8,6 +8,7 @@ const List = styled('ul', {
   justifyContent: 'flex-start',
   listStyleType: 'none',
   '@desktop': { gap: '3.5rem' },
+  '@laptop': { gap: '3.25rem' },
   '@tablet': { gap: '3rem' },
   '@mobile': { gap: '2.5rem' },
 });
@@ -17,12 +18,12 @@ const ListItem = styled('li', {
   height: 'fit-content',
   width: 'fit-content',
   fontFamily: 'dreadful',
-  fontSize: '1.5em',
   color: '$white',
   cursor: 'unset',
-  '@desktop': { fontSize: '1.5em' },
-  '@tablet': { fontSize: '1.25em' },
-  '@mobile': { fontSize: '1em' },
+  '@desktop': { fontSize: '$normal-desktop' },
+  '@laptop': { fontSize: '$normal-laptop' },
+  '@tablet': { fontSize: '$normal-tablet' },
+  '@mobile': { fontSize: '$normal-mobile' },
 });
 
 const ListItemAnchor = styled('a', {

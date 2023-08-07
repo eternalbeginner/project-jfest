@@ -25,6 +25,7 @@ const globalStyles = globalCss({
   },
   body: {
     fontFamily: '$main',
+    fontSize: '$main',
     letterSpacing: 1.1,
   },
 });

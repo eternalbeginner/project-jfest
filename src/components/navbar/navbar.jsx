@@ -1,3 +1,5 @@
+import { useWindowScroll } from '@uidotdev/usehooks';
+
 import { styled } from '../../../stitches.config';
 
 import NavbarCta from './navbar-cta';
@@ -14,6 +16,9 @@ const Container = styled('nav', {
   height: 'max-content',
   width: '100%',
   padding: '1.75rem 5%',
+  transition: 'all .2s ease-in-out',
+  transitionProperty: 'backdrop-filter',
+  zIndex: 9,
   '& > .left': {
     display: 'flex',
     alignItems: 'center',
@@ -35,8 +40,9 @@ const Container = styled('nav', {
 });
 
 export default function Navbar() {
+  const [state] = useWindowScroll();
   return (
-    <Container>
+    <Container css={state.y > 20 ? { backdropFilter: 'blur(6px)' } : null}>
       <div className="left">
         <NavbarLogo />
         <NavbarMenu />
