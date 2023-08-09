@@ -45,6 +45,9 @@ const BaseButton = styled('button', {
       dark: { color: '$white' },
       light: { color: '$dark', '& > span': { color: '$dark', backgroundColor: '$white' } },
     },
+    fullWidth: {
+      true: { width: '100%' },
+    },
   },
   defaultVariants: { color: 'dark' },
 });

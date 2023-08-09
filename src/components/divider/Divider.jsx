@@ -9,6 +9,6 @@ const BaseDivider = styled('img', {
   objectPosition: 'center',
 });
 
-export default function Divider() {
-  return <BaseDivider src={divider} />;
+export default function Divider({ ...props }) {
+  return <BaseDivider {...props} src={divider} />;
 }
