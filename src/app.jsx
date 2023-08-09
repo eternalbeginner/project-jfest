@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { globalCss } from '../stitches.config';
+import { globalCss } from '@/stitches.config';
 
-import { Navbar } from './components/navbar';
-import { Footer } from './components/footer';
+import { Navbar } from '@/src/components/navbar';
+import { Footer } from '@/src/components/footer';
 
-import HomePage from './pages/home';
+import HomePage from '@/src/pages/home';
 
-import dreadful from './assets/fonts/dreadful.otf';
-import jack from './assets/fonts/jack-reacher.ttf';
+import dreadful from '@/src/assets/fonts/dreadful.otf';
+import jack from '@/src/assets/fonts/jack-reacher.ttf';
 
 const router = createBrowserRouter([{ path: '/', element: <HomePage /> }]);
 

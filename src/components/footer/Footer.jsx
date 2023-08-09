@@ -1,7 +1,7 @@
 import { styled } from '../../../stitches.config';
 
-import topMobile from '../../assets/footer/top-mobile.png';
-import top from '../../assets/footer/top.png';
+import topMobile from '../../assets/misc/shared-land-mobile.png';
+import top from '../../assets/misc/shared-land.png';
 
 import bottomLeftMisc from '../../assets/footer/bottom-left-misc.png';
 import bottomRightMisc from '../../assets/footer/bottom-right-misc.png';

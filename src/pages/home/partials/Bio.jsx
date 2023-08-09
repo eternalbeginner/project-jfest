@@ -3,8 +3,8 @@ import { Text } from '../../../components/text';
 import { Title } from '../../../components/title';
 
 import bioMaster from '../../../assets/misc/bio-master.png';
-import bioSpider from '../../../assets/misc/bio-spider.svg';
 import bioWeb from '../../../assets/misc/bio-web.svg';
+import sharedSpiderOrange from '../../../assets/misc/shared-spider-orange.svg';
 
 const Container = styled('section', {
   display: 'grid',
@@ -70,7 +70,7 @@ export default function Bio() {
             overflow: 'hidden',
           }}>
           <LeftImage src={bioMaster} />
-          <LeftIconSpider src={bioSpider} alt="Bio spider icon" />
+          <LeftIconSpider src={sharedSpiderOrange} alt="Bio spider icon" />
           <LeftIconWeb src={bioWeb} alt="Bio web icon" />
         </div>
       </div>
